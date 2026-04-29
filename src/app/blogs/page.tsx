@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Clock, User, Share2, ArrowRight, ChevronRight, TrendingUp, Newspaper } from "lucide-react";
 
-export default function NewsPage() {
-  const news = [
+export default function BlogsPage() {
+  const blogs = [
     {
       title: "MTHL Impact: Property Prices in Panvel and Ulwe surge by 15%",
       category: "Market Trends",
@@ -41,8 +41,8 @@ export default function NewsPage() {
       <section className="bg-muted py-16 border-b border-border">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl">
-            <span className="text-accent font-bold uppercase tracking-[0.3em] text-xs">Mumbai Real Estate News</span>
-            <h1 className="text-4xl md:text-5xl font-bold font-heading mt-4 text-primary leading-tight">Latest Property Insights & Infrastructure Updates</h1>
+            <span className="text-accent font-bold uppercase tracking-[0.3em] text-xs">Mumbai Real Estate Blogs</span>
+            <h1 className="text-4xl md:text-5xl font-bold font-heading mt-4 text-primary leading-tight">Latest Property Blogs & Infrastructure Updates</h1>
           </div>
         </div>
       </section>
@@ -52,7 +52,7 @@ export default function NewsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             {/* Main News List */}
             <div className="lg:col-span-2 space-y-12">
-              {news.map((item, idx) => (
+              {blogs.map((item, idx) => (
                 <article key={idx} className="group flex flex-col md:flex-row gap-8 items-center">
                   <div className="w-full md:w-64 h-48 relative rounded-3xl overflow-hidden shrink-0 shadow-lg">
                     <Image src={item.image} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -101,7 +101,7 @@ export default function NewsPage() {
                     <p className="text-white/60 text-sm leading-relaxed">Join 15,000+ Mumbai property investors receiving our curated weekly market report.</p>
                     <div className="space-y-3">
                         <input type="email" placeholder="Your Email" className="w-full bg-white/10 px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-1 focus:ring-secondary/50 placeholder:text-white/30" />
-                        <button className="w-full bg-secondary text-primary font-bold py-3 rounded-xl text-sm hover:scale-[1.02] transition-transform">Get News First</button>
+                        <button className="w-full bg-secondary text-primary font-bold py-3 rounded-xl text-sm hover:scale-[1.02] transition-transform">Get Blogs First</button>
                     </div>
                 </div>
             </aside>

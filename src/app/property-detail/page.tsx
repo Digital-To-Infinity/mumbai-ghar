@@ -4,7 +4,8 @@ import Link from "next/link";
 import { 
   BedDouble, Bath, Square, MapPin, CheckCircle2, ChevronRight, 
   Share2, Heart, ShieldCheck, User, Phone, Mail, MessageSquare,
-  CarFront, ArrowUpFromLine, Layers, Info
+  CarFront, ArrowUpFromLine, Layers, Info,
+  TrendingUp
 } from "lucide-react";
 
 export default function PropertyDetailPage() {

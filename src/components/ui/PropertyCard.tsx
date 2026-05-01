@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BedDouble, Bath, Square, MapPin, CheckCircle2 } from "lucide-react";
@@ -40,11 +39,11 @@ export default function PropertyCard({
         />
         <div className="absolute top-4 left-4 flex gap-2">
           {isVerified && (
-            <span className="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1 shadow-lg">
+            <span className="bg-green-500 text-white text-[12px] font-bold px-2 py-1 rounded-full flex items-center gap-1 shadow-lg">
               <CheckCircle2 className="w-3 h-3" /> VERIFIED
             </span>
           )}
-          <span className="bg-primary/80 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-lg">
+          <span className="bg-primary/80 backdrop-blur-md text-white text-[12px] font-bold px-2 py-1 rounded-full shadow-lg">
             {status}
           </span>
         </div>
@@ -56,13 +55,13 @@ export default function PropertyCard({
       </div>
 
       {/* Content */}
-      <div className="p-5 space-y-4">
+      <div className="p-4 space-y-4">
         <div>
-          <h3 className="text-lg font-bold text-primary truncate hover:text-accent transition-colors">
+          <h3 className="text-2xl font-bold text-primary truncate transition-colors">
             <Link href="/property-detail">{title}</Link>
           </h3>
-          <div className="flex items-center gap-1 mt-1 text-muted-foreground text-sm">
-            <MapPin className="w-3.5 h-3.5" />
+          <div className="flex items-center gap-1 mt-1 text-muted-foreground text-base">
+            <MapPin className="w-4 h-4" />
             <span className="truncate">{location}</span>
           </div>
         </div>
@@ -70,24 +69,24 @@ export default function PropertyCard({
         <div className="grid grid-cols-3 gap-2 py-3 border-y border-border/50">
           <div className="flex flex-col items-center gap-1">
             <BedDouble className="w-4 h-4 text-secondary" />
-            <span className="text-[10px] font-medium text-muted-foreground uppercase">{bhk} BHK</span>
+            <span className="text-[12px] font-medium text-muted-foreground uppercase">{bhk} BHK</span>
           </div>
           <div className="flex flex-col items-center gap-1">
             <Bath className="w-4 h-4 text-secondary" />
-            <span className="text-[10px] font-medium text-muted-foreground uppercase">{bathrooms} Baths</span>
+            <span className="text-[12px] font-medium text-muted-foreground uppercase">{bathrooms} Baths</span>
           </div>
           <div className="flex flex-col items-center gap-1">
             <Square className="w-4 h-4 text-secondary" />
-            <span className="text-[10px] font-medium text-muted-foreground uppercase">{area} Sq.Ft</span>
+            <span className="text-[12px] font-medium text-muted-foreground uppercase">{area} Sq.Ft</span>
           </div>
         </div>
 
         <div className="flex items-center justify-between pt-1">
           <div className="flex flex-col">
-            <span className="text-xs text-muted-foreground">Price</span>
+            <span className="text-sm text-muted-foreground font-semibold">Price</span>
             <span className="text-xl font-bold text-primary">₹{price}</span>
           </div>
-          <button className="bg-primary text-white text-xs font-bold px-4 py-2.5 rounded-xl hover:bg-primary/90 transition-all active:scale-95">
+          <button className="bg-primary text-white text-xs font-bold px-4 py-2.5 rounded-xl hover:bg-primary/90 transition-all active:scale-95 cursor-pointer">
             View Details
           </button>
         </div>

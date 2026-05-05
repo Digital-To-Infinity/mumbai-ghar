@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import BlogHero from "@/components/Blog/BlogHero";
 import BlogFilters from "@/components/Blog/BlogFilters";
 import BlogGrid from "@/components/Blog/BlogGrid";
-import Newsletter from "@/components/Blog/Newsletter";
+import Newsletter from "@/components/layout/Newsletter";
 
 export default function BlogsContent() {
     const searchParams = useSearchParams();

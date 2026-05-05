@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function BlogsPage() {
     return (
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen bg-background">
             <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading Hub...</div>}>
                 <BlogsContent />
             </Suspense>

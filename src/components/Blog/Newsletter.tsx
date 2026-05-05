@@ -34,8 +34,8 @@ const Newsletter = () => {
                 >
                     {/* Background Glows - Enhanced for Mobile */}
                     <div className="absolute top-0 right-0 w-full h-full pointer-events-none opacity-20">
-                        <div className="absolute -top-1/2 -right-1/4 w-[500px] h-[500px] max-[426px]:w-[300px] max-[426px]:h-[300px] bg-brand-primary/40 rounded-full blur-[100px] animate-pulse" />
-                        <div className="absolute -bottom-1/2 -left-1/4 w-[400px] h-[400px] max-[426px]:w-[250px] max-[426px]:h-[250px] bg-brand-primary/20 rounded-full blur-[100px]" />
+                        <div className="absolute -top-1/2 -right-1/4 w-[500px] h-[500px] max-[426px]:w-[300px] max-[426px]:h-[300px] bg-primary/40 rounded-full blur-[100px] animate-pulse" />
+                        <div className="absolute -bottom-1/2 -left-1/4 w-[400px] h-[400px] max-[426px]:w-[250px] max-[426px]:h-[250px] bg-primary/20 rounded-full blur-[100px]" />
                     </div>
 
                     <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center">
@@ -46,8 +46,8 @@ const Newsletter = () => {
                             transition={{ duration: 0.5 }}
                             className="inline-flex items-center gap-2 px-4 py-2 max-[426px]:px-3 max-[426px]:py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6"
                         >
-                            <Bell className="w-4 h-4 text-brand-primary animate-bounce" />
-                            <span className="text-[11px] max-[426px]:text-[10px] font-black text-brand-primary tracking-[0.2em] uppercase">Private Investors Lab</span>
+                            <Bell className="w-4 h-4 text-primary animate-bounce" />
+                            <span className="text-[11px] max-[426px]:text-[10px] font-black text-primary tracking-[0.2em] uppercase">Private Investors Lab</span>
                         </motion.div>
 
                         <motion.div
@@ -66,22 +66,22 @@ const Newsletter = () => {
                                             <Image src={`https://i.pravatar.cc/100?u=${i + 15}`} alt="Specialists" fill className="object-cover" />
                                         </motion.div>
                                     ))}
-                                    <div className="w-12 h-12 max-[426px]:w-10 max-[426px]:h-10 rounded-full border-2 border-zinc-950 bg-brand-primary flex items-center justify-center text-[11px] max-[426px]:text-[9px] font-black text-white shadow-xl relative z-20">
+                                    <div className="w-12 h-12 max-[426px]:w-10 max-[426px]:h-10 rounded-full border-2 border-zinc-950 bg-primary flex items-center justify-center text-[11px] max-[426px]:text-[9px] font-black text-white shadow-xl relative z-20">
                                         +5.2k
                                     </div>
                                 </div>
                                 <div className="h-6 w-px max-[426px]:h-4 bg-white/10 mx-2" />
-                                <div className="flex items-center gap-1.5 bg-brand-primary/10 px-4 py-1.5 max-[426px]:px-3 max-[426px]:py-1 rounded-full border border-brand-primary/30 shadow-inner">
-                                    <CheckCircle2 size={12} className="text-brand-primary" />
-                                    <span className="text-brand-primary text-[10px] max-[426px]:text-[9px] font-black uppercase tracking-widest">Premium Membership</span>
+                                <div className="flex items-center gap-1.5 bg-primary/10 px-4 py-1.5 max-[426px]:px-3 max-[426px]:py-1 rounded-full border border-primary/30 shadow-inner">
+                                    <CheckCircle2 size={12} className="text-primary" />
+                                    <span className="text-primary text-[10px] max-[426px]:text-[9px] font-black uppercase tracking-widest">Premium Membership</span>
                                 </div>
                             </div>
                             <div className="flex flex-col items-center gap-1.5 group/proof cursor-default">
-                                <span className="text-zinc-400 text-[11px] max-[426px]:text-[10px] font-bold uppercase tracking-[0.2em] flex items-center gap-2 group-hover/proof:text-zinc-300 transition-colors">
-                                    <Users size={14} className="text-brand-primary group-hover/proof:rotate-12 transition-transform" />
+                                <span className="text-zinc-400 text-[11px] max-[426px]:text-[10px] font-bold uppercase tracking-[0.2em] flex items-center gap-2 group-proof:text-zinc-300 transition-colors">
+                                    <Users size={14} className="text-primary group-hover/proof:rotate-12 transition-transform" />
                                     Trusted by
                                 </span>
-                                <span className="text-white text-[11px] max-[426px]:text-[10px] font-black uppercase tracking-[0.2em] group-hover/proof:text-brand-primary transition-colors">
+                                <span className="text-white text-[11px] max-[426px]:text-[10px] font-black uppercase tracking-[0.2em] group-hover/proof:text-primary transition-colors">
                                     Professional Market Arbitrators
                                 </span>
                             </div>
@@ -89,7 +89,7 @@ const Newsletter = () => {
 
                         <h2 className="text-4xl md:text-6xl max-[426px]:text-3xl font-black !text-white mb-6 max-[426px]:mb-4 tracking-tight leading-[1.1]">
                             The Navi Mumbai <br className="hidden max-[426px]:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-[#fff4d6] italic">Weekly Intelligence</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#E0E7FF] italic">Weekly Intelligence</span>
                         </h2>
 
                         <p className="text-zinc-400 text-base md:text-xl font-medium max-w-xl mb-12 max-[426px]:mb-10 leading-relaxed max-[426px]:text-[15px] opacity-80">
@@ -123,22 +123,22 @@ const Newsletter = () => {
                                 ) : (
                                     <motion.form
                                         onSubmit={handleSubmit}
-                                        className="flex flex-col md:flex-row gap-4 max-[426px]:gap-3 p-3 max-[426px]:p-2 bg-white/5 backdrop-blur-2xl rounded-[2rem] max-[426px]:rounded-2xl border border-white/10 focus-within:border-brand-primary/40 focus-within:bg-white/[0.08] transition-all duration-500 shadow-2xl"
+                                        className="flex flex-col md:flex-row gap-4 max-[426px]:gap-3 p-3 max-[426px]:p-2 bg-white/5 backdrop-blur-2xl rounded-[2rem] max-[426px]:rounded-2xl border border-white/10 focus-within:border-primary/40 focus-within:bg-white/[0.08] transition-all duration-500 shadow-2xl"
                                     >
                                         <div className="flex-1 flex items-center px-5 max-[426px]:px-4 gap-4">
-                                            <Mail className="w-6 h-6 max-[426px]:w-5 max-[426px]:h-5 text-zinc-500 group-focus-within:text-brand-primary group-focus-within:scale-110 transition-all" />
+                                            <Mail className="w-6 h-6 max-[426px]:w-5 max-[426px]:h-5 text-zinc-500 group-focus-within:text-primary group-focus-within:scale-110 transition-all" />
                                             <input
                                                 type="email"
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
                                                 placeholder="Enter business email..."
-                                                className="w-full py-5 max-[426px]:py-4 bg-transparent text-white outline-none placeholder:text-zinc-600 font-black text-lg max-[426px]:text-base selection:bg-brand-primary selection:text-zinc-950"
+                                                className="w-full py-5 max-[426px]:py-4 bg-transparent text-white outline-none placeholder:text-zinc-600 font-black text-lg max-[426px]:text-base selection:bg-primary selection:text-zinc-950"
                                                 required
                                             />
                                         </div>
                                         <button
                                             type="submit"
-                                            className="px-10 py-5 max-[426px]:py-4 bg-brand-primary text-zinc-950 font-black rounded-2xl max-[426px]:rounded-xl hover:bg-white hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3 group/btn relative overflow-hidden shadow-xl shadow-brand-primary/20 whitespace-nowrap cursor-pointer"
+                                            className="px-10 py-5 max-[426px]:py-4 bg-primary text-white font-black rounded-2xl max-[426px]:rounded-xl hover:bg-white hover:text-primary hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3 group/btn relative overflow-hidden shadow-xl shadow-primary/20 whitespace-nowrap cursor-pointer"
                                         >
                                             <span className="relative z-10 uppercase tracking-widest text-sm max-[426px]:text-xs">Secure My Intel</span>
                                             <ArrowRight className="w-5 h-5 max-[426px]:w-4 max-[426px]:h-4 relative z-10 group-hover/btn:translate-x-1 transition-transform" />
@@ -162,8 +162,8 @@ const Newsletter = () => {
                                     transition={{ delay: 0.2 + idx * 0.1 }}
                                     className="flex max-[426px]:flex-row flex-col items-center gap-4 max-[426px]:gap-3 group cursor-default"
                                 >
-                                    <div className="p-3 rounded-2xl bg-white/5 border border-white/5 group-hover:border-brand-primary/30 group-hover:bg-brand-primary/5 transition-all duration-500">
-                                        <span className="text-brand-primary group-hover:scale-110 transition-transform block">{item.icon}</span>
+                                    <div className="p-3 rounded-2xl bg-white/5 border border-white/5 group-hover:border-primary/30 group-hover:bg-primary/5 transition-all duration-500">
+                                        <span className="text-primary group-hover:scale-110 transition-transform block">{item.icon}</span>
                                     </div>
                                     <div className="flex flex-col items-center max-[426px]:items-start">
                                         <span className="text-xs font-black uppercase tracking-[0.2em] text-white">Institutional {item.text.split(' ')[1]}</span>

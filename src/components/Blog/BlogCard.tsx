@@ -55,7 +55,7 @@ const BlogCard = ({ post, index }: BlogCardProps) => {
             whileHover={{ y: -10 }}
             itemScope
             itemType="http://schema.org/BlogPosting"
-            className="group/card relative bg-white rounded-[2.5rem] overflow-hidden border border-neutral-100/80 hover:border-brand-primary/30 transition-all duration-700 hover:shadow-[0_40px_80px_-20px_rgba(186,163,96,0.15)]"
+            className="group/card relative bg-white rounded-[2.5rem] overflow-hidden border border-neutral-100/80 hover:border-primary/30 transition-all duration-700 hover:shadow-[0_40px_80px_-20px_rgba(64,106,175,0.15)]"
         >
             {/* Publisher Schema (Hidden for SEO) */}
             <div itemProp="publisher" itemScope itemType="https://schema.org/Organization" className="hidden">
@@ -72,12 +72,12 @@ const BlogCard = ({ post, index }: BlogCardProps) => {
                 />
 
                 {/* Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-heading/40 via-transparent to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-700" />
 
                 {/* Glass Badge */}
                 <div className="absolute top-4 left-4 z-20">
                     <div className="px-4 py-2 rounded-2xl bg-white/80 backdrop-blur-md border border-white/40 shadow-xl shadow-black/5">
-                        <span className="text-[10px] font-black text-brand-primary uppercase tracking-[0.2em]">
+                        <span className="text-[10px] font-black text-primary uppercase tracking-[0.2em]">
                             {post.category}
                         </span>
                     </div>
@@ -86,7 +86,7 @@ const BlogCard = ({ post, index }: BlogCardProps) => {
                 {/* Share Utility */}
                 <button
                     onClick={handleCopyLink}
-                    className="absolute top-4 right-4 z-20 p-2.5 rounded-xl bg-white/80 backdrop-blur-md border border-white/40 shadow-xl shadow-black/5 text-brand-heading/60 hover:text-brand-primary transition-all duration-300 group/share overflow-hidden cursor-pointer"
+                    className="absolute top-4 right-4 z-20 p-2.5 rounded-xl bg-white/80 backdrop-blur-md border border-white/40 shadow-xl shadow-black/5 text-foreground/60 hover:text-primary transition-all duration-300 group/share overflow-hidden cursor-pointer"
                     title="Copy Article Link"
                 >
                     <AnimatePresence mode="wait">
@@ -117,10 +117,10 @@ const BlogCard = ({ post, index }: BlogCardProps) => {
             {/* Content Section */}
             <div className="p-4 md:p-6 relative">
                 {/* Breadcrumb Micro-component */}
-                <div className="flex items-center gap-1.5 mb-3 text-[10px] font-bold text-brand-paragraph uppercase tracking-widest">
+                <div className="flex items-center gap-1.5 mb-3 text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
                     <span>Blog</span>
                     <ChevronRight size={12} />
-                    <span className="text-brand-primary">{post.category}</span>
+                    <span className="text-primary">{post.category}</span>
                 </div>
 
                 <Link
@@ -128,12 +128,12 @@ const BlogCard = ({ post, index }: BlogCardProps) => {
                     className="block"
                     title={`Read more about ${post.title} | Navi Mumbai Property Market Insights`}
                 >
-                    <h2 itemProp="headline" className="text-2xl font-black text-brand-heading mb-4 leading-[1.3] group-hover/card:!text-brand-primary-hover transition-colors duration-300 line-clamp-2">
+                    <h2 itemProp="headline" className="text-2xl font-black text-foreground mb-4 leading-[1.3] group-hover/card:!text-primary transition-colors duration-300 line-clamp-2">
                         {post.title}
                     </h2>
                 </Link>
 
-                <p itemProp="description" className="text-brand-paragraph/70 text-[15px] mb-6 line-clamp-4 font-medium leading-relaxed">
+                <p itemProp="description" className="text-muted-foreground/70 text-[15px] mb-6 line-clamp-4 font-medium leading-relaxed">
                     {post.excerpt}
                 </p>
 
@@ -147,18 +147,18 @@ const BlogCard = ({ post, index }: BlogCardProps) => {
                     {/* Meta info */}
                     <div className="flex items-center gap-6">
                         <div className="flex items-center group/meta">
-                            <div className="w-8 h-8 rounded-xl bg-brand-primary/5 flex items-center justify-center text-brand-primary group-hover/meta:bg-brand-primary group-hover/meta:text-white transition-colors duration-500 mr-3">
+                            <div className="w-8 h-8 rounded-xl bg-primary/5 flex items-center justify-center text-primary group-hover/meta:bg-primary group-hover/meta:text-white transition-colors duration-500 mr-3">
                                 <Calendar className="w-4 h-4" />
                             </div>
-                            <span className="text-[12px] font-bold text-brand-paragraph uppercase tracking-wider">
+                            <span className="text-[12px] font-bold text-muted-foreground uppercase tracking-wider">
                                 <time itemProp="datePublished" dateTime={displayDate}>{displayDate}</time>
                             </span>
                         </div>
                         <div className="flex items-center group/meta">
-                            <div className="w-8 h-8 rounded-xl bg-brand-primary/5 flex items-center justify-center text-brand-primary group-hover/meta:bg-brand-primary group-hover/meta:text-white transition-colors duration-500 mr-3">
+                            <div className="w-8 h-8 rounded-xl bg-primary/5 flex items-center justify-center text-primary group-hover/meta:bg-primary group-hover/meta:text-white transition-colors duration-500 mr-3">
                                 <Clock className="w-4 h-4" />
                             </div>
-                            <span className="text-[12px] font-bold text-brand-paragraph uppercase tracking-wider">{post.readTime}</span>
+                            <span className="text-[12px] font-bold text-muted-foreground uppercase tracking-wider">{post.readTime}</span>
                         </div>
                     </div>
 
@@ -166,11 +166,11 @@ const BlogCard = ({ post, index }: BlogCardProps) => {
                     <Link
                         href={`/blogs/${post.slug}`}
                         title={`Read Article: ${post.title} - Expert Navi Mumbai Property Market Analysis`}
-                        className="group/btn relative w-full flex items-center justify-center gap-3 bg-brand-primary hover:bg-brand-primary-hover text-brand-white py-4 px-6 rounded-2xl font-black transition-all duration-500 overflow-hidden"
+                        className="group/btn relative w-full flex items-center justify-center gap-3 bg-primary hover:bg-primary/90 text-white py-4 px-6 rounded-2xl font-black transition-all duration-500 overflow-hidden"
                     >
                         <span className="relative z-10 text-sm uppercase tracking-widest">Read Article</span>
                         <ArrowRight className="relative z-10 w-5 h-5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-x-0.5 transition-transform" />
-                        <div className="absolute inset-0 bg-brand-primary/10 -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-700" />
+                        <div className="absolute inset-0 bg-primary/10 -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-700" />
                     </Link>
                 </div>
             </div>
